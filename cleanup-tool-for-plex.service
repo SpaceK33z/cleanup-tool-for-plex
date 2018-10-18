@@ -1,0 +1,12 @@
+[Unit]
+Description=Cleanup Tool for Plex
+After=network-online.target
+
+[Service]
+ExecStart=/usr/bin/node /opt/cleanup-tool-for-plex/backend/index.js
+User=youruser
+WorkingDirectory=/opt/cleanup-tool-for-plex
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
