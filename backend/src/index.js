@@ -1,5 +1,6 @@
 const restify = require('restify');
 const dotenv = require('dotenv');
+const path = require('path');
 dotenv.config({
   path: process.env.ENV_FILE || '../.env',
 });
@@ -17,6 +18,14 @@ const cors = corsMiddleware({
 
 server.pre(cors.preflight);
 server.use(cors.actual);
+
+server.get(
+  '/*',
+  restify.plugins.serveStatic({
+    directory: path.join(__dirname, '../../frontend/dist'),
+    default: 'index.html',
+  })
+);
 
 server.get('/torrent', async (req, res, next) => {
   res.send(await fetchTorrents());
