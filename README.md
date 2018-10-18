@@ -1,4 +1,4 @@
-# Plex Cleanup
+# Cleanup Tool for Plex
 
 After you've automated your whole Plex server setup by setting up Radarr, Sonarr and a torrent downloader, you're all set and can download any movie or TV show in a second.
 **Ultimately your disks end up getting full though**. You'll remove some torrents that you've been seeding for days anyway, remove some movies that are very big etc. A few days later you see that Radarr has downloaded the same movie you've deleted again, because you've only removed it from the filesystem.
