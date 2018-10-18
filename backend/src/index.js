@@ -24,8 +24,16 @@ server.get(
   restify.plugins.serveStatic({
     directory: path.join(__dirname, '../../frontend/dist'),
     default: 'index.html',
+    appendRequestPath: false,
   })
 );
+
+// Nasty hack because I want to host this on a subpath of a domain
+server.pre((req, res, next) => {
+  // TODO: don't hardcode subpath
+  req.url = req.url.replace('/plex_cleanup', '') || '/';
+  next();
+});
 
 server.get('/torrent', async (req, res, next) => {
   res.send(await fetchTorrents());
