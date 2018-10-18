@@ -1,0 +1,28 @@
+{
+  "name": "plex-cleanup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Kees Kluskens <kees@webduck.nl>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@volst/eslint-config": "^2.1.0",
+    "antd": "^3.9.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-runtime": "^6.26.0",
+    "eslint": "^5.6.0",
+    "ky": "^0.3.0",
+    "parcel-bundler": "^1.9.7",
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
+  },
+  "scripts": {
+    "start": "parcel src/index.html"
+  },
+  "devDependencies": {
+    "less": "^2.7.3"
+  }
+}
