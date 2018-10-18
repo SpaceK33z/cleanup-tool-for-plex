@@ -1,9 +1,11 @@
 # Plex Cleanup
 
 After you've automated your whole Plex server setup by setting up Radarr, Sonarr and a torrent downloader, you're all set and can download any movie or TV show in a second.
-Ultimately your disks end up getting full though. You'll remove some torrents that you've been seeding for days anyway, remove some movies that are very big etc. A few days later you see that Radarr has downloaded the same movie you've deleted again, because you've only removed it from the filesystem.
+**Ultimately your disks end up getting full though**. You'll remove some torrents that you've been seeding for days anyway, remove some movies that are very big etc. A few days later you see that Radarr has downloaded the same movie you've deleted again, because you've only removed it from the filesystem.
 
-This tool intends to fix that. It very clearly shows you all the movies, TV shows and torrents that are on a given disk.
+This tool intends to fix that. It very clearly shows you all the movies, TV shows and torrents that are on a given disk. You get advanced filters, can easily sort by size etc.
+
+**Project is still in early development**
 
 ## Features
 
@@ -25,7 +27,7 @@ Project is still in early development. TODO:
 
 - Add link to Radarr in movie item (with "external" looking icon)
 - Mark torrents that have been added <2 weeks with red
-- Make table fixed size
+- Make table fixed size to prevent page jumps
 - Show tooltip on "date added" with full date
 - Show upload ratio on torrents
 - Improve error state when delete fails
