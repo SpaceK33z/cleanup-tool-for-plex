@@ -3,7 +3,7 @@ Description=Cleanup Tool for Plex
 After=network-online.target
 
 [Service]
-ExecStart=/usr/bin/node /opt/cleanup-tool-for-plex/backend/index.js
+ExecStart=/usr/bin/node /opt/cleanup-tool-for-plex/backend/src/index.js
 User=youruser
 WorkingDirectory=/opt/cleanup-tool-for-plex
 Restart=always

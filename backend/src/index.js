@@ -2,7 +2,7 @@ const restify = require('restify');
 const dotenv = require('dotenv');
 const path = require('path');
 dotenv.config({
-  path: process.env.ENV_FILE || '../.env',
+  path: process.env.ENV_FILE || '../../.env',
 });
 
 const { fetchTorrents, deleteTorrents } = require('./lib/transmission');
