@@ -1,4 +1,9 @@
 const restify = require('restify');
+const dotenv = require('dotenv');
+dotenv.config({
+  path: process.env.ENV_FILE || '../.env',
+});
+
 const { fetchTorrents, deleteTorrents } = require('./lib/transmission');
 const { fetchDiskspace, fetchMovies, deleteMovies } = require('./lib/radarr');
 const corsMiddleware = require('restify-cors-middleware');
